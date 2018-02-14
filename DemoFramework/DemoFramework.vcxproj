@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{727AD9B1-19E0-4925-BEA2-D8528CFA3F2E}</ProjectGuid>
+    <RootNamespace>DemoFramework</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26430.15</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\freeglut\include;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\glew-2.1.0\include;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\DevIL Windows SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\freeglut\lib;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\glew-2.1.0\lib\Release\Win32;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\DevIL Windows SDK\lib\x86\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\freeglut\include;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\glew-2.1.0\include;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\DevIL Windows SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\freeglut\lib;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\glew-2.1.0\lib\Release\Win32;D:\crawfis\Documents\SVN-OSU\CourseMaterials\CSE781\DevIL Windows SDK\lib\x86\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\openGL\freeglut-MSVC-3.0.0-2.mp\freeglut\include;C:\openGL\DevIL-Windows-SDK-1.8.0\DevIL Windows SDK\include;C:\openGL\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32; TIXML_USE_TICPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;opengl32.lib;DevIL.lib;ILU.lib;ILUT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openGL\glew\lib\Release\Win32;C:\openGL\freeglut-MSVC-3.0.0-2.mp\freeglut\lib;C:\openGL\DevIL-Windows-SDK-1.8.0\DevIL Windows SDK\lib\x86\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Crawfis\Documents\Programming\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32; TIXML_USE_TICPP;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;opengl32.lib;DevIL.lib;ILU.lib;ILUT.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BrushSize.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="LightManager.cpp" />
+    <ClCompile Include="MatrixStack.cpp" />
+    <ClCompile Include="NullCommand.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="ShaderConstantMatrix4.cpp" />
+    <ClCompile Include="TextureBindManager.cpp" />
+    <ClCompile Include="MaterialManager.cpp" />
+    <ClCompile Include="ModelManager.cpp" />
+    <ClCompile Include="RenderManager.cpp" />
+    <ClCompile Include="RenderState.cpp" />
+    <ClCompile Include="TexParam2DNoMipMap.cpp" />
+    <ClCompile Include="TexParamMipMap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdjustViewPortCommand.h" />
+    <ClInclude Include="BlankTexture2D.h" />
+    <ClInclude Include="BrushSize.h" />
+    <ClInclude Include="ClearColorCommand.h" />
+    <ClInclude Include="ClearDepthCommand.h" />
+    <ClInclude Include="ClearFrameCommand.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="DebugRenderVisitor.h" />
+    <ClInclude Include="DrawableBrushPath.h" />
+    <ClInclude Include="DrawableCubeSolution.h" />
+    <ClInclude Include="DrawableOBJtangent.h" />
+    <ClInclude Include="DrawableQuad.h" />
+    <ClInclude Include="DrawableSphereSolution.h" />
+    <ClInclude Include="DrawableTeapot.h" />
+    <ClInclude Include="FrustumTransformSolution.h" />
+    <ClInclude Include="Background.h" />
+    <ClInclude Include="ITextureBindManager.h" />
+    <ClInclude Include="LightManager.h" />
+    <ClInclude Include="LightSetNode.h" />
+    <ClInclude Include="LookAtTransformSolution.h" />
+    <ClInclude Include="MatrixStack.h" />
+    <ClInclude Include="NullCommand.h" />
+    <ClInclude Include="DefaultController.h" />
+    <ClInclude Include="DepthBuffer.h" />
+    <ClInclude Include="DepthTestedRasterOps.h" />
+    <ClInclude Include="DevIL.h" />
+    <ClInclude Include="DirectionalLight.h" />
+    <ClInclude Include="DrawableFloorSolution.h" />
+    <ClInclude Include="DrawableProxy.h" />
+    <ClInclude Include="DrawableRenderState.h" />
+    <ClInclude Include="DrawableSquare.h" />
+    <ClInclude Include="DrawModeController.h" />
+    <ClInclude Include="DrawModeNode.h" />
+    <ClInclude Include="ExaminerCameraNode.h" />
+    <ClInclude Include="FileUtility.h" />
+    <ClInclude Include="FragmentRoutine.h" />
+    <ClInclude Include="GeometryRoutine.h" />
+    <ClInclude Include="GroupNode.h" />
+    <ClInclude Include="ICommand.h" />
+    <ClInclude Include="IDepthBuffer.h" />
+    <ClInclude Include="IDrawable.h" />
+    <ClInclude Include="IDrawableNode.h" />
+    <ClInclude Include="IKeyboardHandler.h" />
+    <ClInclude Include="ILight.h" />
+    <ClInclude Include="IMaterial.h" />
+    <ClInclude Include="IMouseHandler.h" />
+    <ClInclude Include="IRasterOps.h" />
+    <ClInclude Include="IRenderTarget.h" />
+    <ClInclude Include="ISceneNode.h" />
+    <ClInclude Include="IShaderConstant.h" />
+    <ClInclude Include="IShaderProgram.h" />
+    <ClInclude Include="IShaderRoutine.h" />
+    <ClInclude Include="IStateNode.h" />
+    <ClInclude Include="ITextureApplicator.h" />
+    <ClInclude Include="PaintController.h" />
+    <ClInclude Include="PerspectiveTransformSolution.h" />
+    <ClInclude Include="ResetModelViewNodeSolution.h" />
+    <ClInclude Include="ResetProjectionNodeSolution.h" />
+    <ClInclude Include="SetBackgroundCommand.h" />
+    <ClInclude Include="SetPolygonModeCommand.h" />
+    <ClInclude Include="ShaderConstantLights.h" />
+    <ClInclude Include="ShaderConstantMaterial.h" />
+    <ClInclude Include="ShaderConstantMatrix4.h" />
+    <ClInclude Include="ShaderConstantModelView.h" />
+    <ClInclude Include="ShaderConstantModelViewProj.h" />
+    <ClInclude Include="ShaderConstantNormalMatrix.h" />
+    <ClInclude Include="ShaderConstantProjection.h" />
+    <ClInclude Include="ShaderProgramWithMatrices.h" />
+    <ClInclude Include="SolidColorMaterialSolution.h" />
+    <ClInclude Include="TextureBindManager.h" />
+    <ClInclude Include="ITextureDataObject.h" />
+    <ClInclude Include="ITextureParameters.h" />
+    <ClInclude Include="ITransformNode.h" />
+    <ClInclude Include="IVisitor.h" />
+    <ClInclude Include="MaterialManager.h" />
+    <ClInclude Include="MaterialProxy.h" />
+    <ClInclude Include="MathFactory.h" />
+    <ClInclude Include="MathUtil.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="ModelManager.h" />
+    <ClInclude Include="NoDepthRasterOps.h" />
+    <ClInclude Include="OpenGL.h" />
+    <ClInclude Include="PointLight.h" />
+    <ClInclude Include="PrintSceneVisitor.h" />
+    <ClInclude Include="RenderManager.h" />
+    <ClInclude Include="RenderState.h" />
+    <ClInclude Include="RenderTarget.h" />
+    <ClInclude Include="RenderTargetProxy.h" />
+    <ClInclude Include="RenderVisitor.h" />
+    <ClInclude Include="SamplerApplicator.h" />
+    <ClInclude Include="SearchVisitor.h" />
+    <ClInclude Include="ShadedMaterial.h" />
+    <ClInclude Include="ShaderConstantCollection.h" />
+    <ClInclude Include="ShaderConstantVec4.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="SimpleShaderMaterial.h" />
+    <ClInclude Include="SingleFireCommand.h" />
+    <ClInclude Include="StateNodeBase.h" />
+    <ClInclude Include="SwapCommand.h" />
+    <ClInclude Include="TexParam2DMipMap.h" />
+    <ClInclude Include="TexParam2DNoMipMap.h" />
+    <ClInclude Include="TexParam2DWrapped.h" />
+    <ClInclude Include="TextureBinding.h" />
+    <ClInclude Include="TextureBindManagerOpenGL.h" />
+    <ClInclude Include="TextureData2DBase.h" />
+    <ClInclude Include="TextureData2DBuilder.h" />
+    <ClInclude Include="TextureDataImage.h" />
+    <ClInclude Include="TextureParameterList.h" />
+    <ClInclude Include="Trackball.h" />
+    <ClInclude Include="TransformMatrixNodeSolution.h" />
+    <ClInclude Include="TransformNodeBase.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="VertexRoutine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Media\Shaders\backdrop.frag" />
+    <None Include="..\Media\Shaders\backdrop.geom" />
+    <None Include="..\Media\Shaders\backdrop.vert" />
+    <None Include="..\Media\Shaders\brush.frag" />
+    <None Include="..\Media\Shaders\brush.geom" />
+    <None Include="..\Media\Shaders\brush.vert" />
+    <None Include="..\Media\Shaders\DirectionalLight.vert" />
+    <None Include="..\Media\Shaders\DoubleTextured-vert.glsl" />
+    <None Include="..\Media\Shaders\DoubleTextured.frag" />
+    <None Include="..\Media\Shaders\NormalFrag.frag" />
+    <None Include="..\Media\Shaders\NormalPosition.vert" />
+    <None Include="..\Media\Shaders\NormalVertex.vert" />
+    <None Include="..\Media\Shaders\ShadedTextured-vert.glsl" />
+    <None Include="..\Media\Shaders\ShadedTexturedwithNormals.glsl" />
+    <None Include="..\Media\Shaders\SimpleFragment.frag" />
+    <None Include="..\Media\Shaders\SimpleMVPVertex.vert" />
+    <None Include="..\Media\Shaders\SimpleVertex.vert" />
+    <None Include="..\Media\Shaders\SolidColorSolution.frag" />
+    <None Include="..\Media\Shaders\SolidColorSolution.vert" />
+    <None Include="..\Media\Shaders\Textured.frag" />
+    <None Include="..\Media\Shaders\TexturedColored.frag" />
+    <None Include="..\Media\Shaders\VertexLight.glsl" />
+    <None Include="..\Media\Shaders\WFfrag.frag" />
+    <None Include="..\Media\Shaders\WFVertex.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
